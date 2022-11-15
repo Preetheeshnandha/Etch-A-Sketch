@@ -1,0 +1,38 @@
+body {
+    background-color: #A0E4CB;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.valueContainer {
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#container {
+    margin: 20px 35% 0;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+}
+
+.container1 {
+    flex-grow: 1;
+    display: flex;
+}
+
+
+.flex {
+    flex: 1;
+}
+
+.hoverColor {
+    background-color: black;
+}

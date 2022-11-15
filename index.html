@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Etch-A-Sketch</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-   
-    <body>
 
-        
-        <script src="index.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Etch-A-Sketch</h1>
+    <div class="valueContainer">
+        <div>
+            <h3 class="showRange"> 4X4</h3>
+            <input type="range" id="gridCount" value="4" min="4" max="64">
+            <button class="submit">Submit</button>
+        </div>
+    </div>
+
+
+
+    <div id="container"></div>
+
+    <script src="index.js"></script>
+</body>
 
 </html>
