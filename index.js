@@ -1,20 +1,37 @@
 
-
-
-
+//show range value
+let rangeInput = document.querySelector('input[type="range"]');
+let rangeValue = () => {
+    newValue = rangeInput.value;
+    let showRange = document.querySelector(".showRange");
+    showRange.textContent = `${newValue}X${newValue}`;
+}
+rangeInput.addEventListener("input", rangeValue);
 
 const container = document.querySelector("#container");
 
-const button = document.querySelector("button");
-button.addEventListener("click", getVal);
+//Submit button
+const submitButton = document.querySelector(".submit");
+submitButton.addEventListener("click", getVal);
+//Resert Button
+const resetButton = document.querySelector(".reset");
+resetButton.addEventListener("click", () => {
+    window.location.reload();
+});
 
+//For default page
+const userValue = document.querySelector("#gridCount").value;
+console.log(userValue);
+createGrid(userValue);
+showColor();
 
+function removeExistDivs() {
+    container.innerHTML = "";
+}
 
 function getVal() {
+    removeExistDivs();
     const userValue = document.querySelector("#gridCount").value;
-
-    //show range value
-
     console.log(userValue);
     createGrid(userValue);
     showColor();
@@ -39,29 +56,15 @@ function createGrid(userVal) {
     }
 }
 
-
 function showColor() {
     const hoverDivs = document.querySelectorAll(".flex");
-
     hoverDivs.forEach(hoverDiv => {
         hoverDiv.addEventListener("mouseover", () => {
             hoverDiv.classList.add("hoverColor");
         });
-
     });
 }
 
 function stopCreate() {
-    button.removeEventListener("click", getVal);
+    submitButton.removeEventListener("click", getVal);
 }
-
-
-let rangeInput = document.querySelector('input[type="range"]');
-
-let rangeValue = () => {
-    newValue = rangeInput.value;
-    let showRange = document.querySelector(".showRange");
-    showRange.textContent = `${newValue}X${newValue}`;
-}
-
-rangeInput.addEventListener("input", rangeValue);
